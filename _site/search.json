@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Test Blog",
+    "section": "",
+    "text": "Practice\n\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\nEvan Ginting\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/Penguins-Insight/index.html",
+    "href": "posts/Penguins-Insight/index.html",
+    "title": "Practice",
+    "section": "",
+    "text": "In this analysis, we will try to unveil the relationship between body mass and flipper length of penguins. Do heavier the penguins have longer flipper? Let’s find out!\nHere is all the libraries that we are going to use in this analysis.\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggplot2)\n\nHere is the preview of the dataset:\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\nLet see the correlation between body mass and flipper length.\n\npenguins %&gt;%\n  na.omit() %&gt;%\n  ggplot(aes(x = body_mass_g,\n                     y = flipper_length_mm,\n                     colour = sex)) +\n         geom_point() +\n  ggtitle(\"Correlation between Flipper Length vs Body Mass\") +\n  xlab(\"Flipper Length (mm)\") +\n  ylab(\"Body Mass (gram)\") +\n  theme_minimal()\n\n\n\n\nFrom the plot above, seems like there is positive relation between body mass and flipper length."
+  },
+  {
+    "objectID": "posts/Penguins-Insight/index.html#penguins-dataset",
+    "href": "posts/Penguins-Insight/index.html#penguins-dataset",
+    "title": "Practice",
+    "section": "",
+    "text": "In this analysis, we will try to unveil the relationship between body mass and flipper length of penguins. Do heavier the penguins have longer flipper? Let’s find out!\nHere is all the libraries that we are going to use in this analysis.\n\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggplot2)\n\nHere is the preview of the dataset:\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\nLet see the correlation between body mass and flipper length.\n\npenguins %&gt;%\n  na.omit() %&gt;%\n  ggplot(aes(x = body_mass_g,\n                     y = flipper_length_mm,\n                     colour = sex)) +\n         geom_point() +\n  ggtitle(\"Correlation between Flipper Length vs Body Mass\") +\n  xlab(\"Flipper Length (mm)\") +\n  ylab(\"Body Mass (gram)\") +\n  theme_minimal()\n\n\n\n\nFrom the plot above, seems like there is positive relation between body mass and flipper length."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]

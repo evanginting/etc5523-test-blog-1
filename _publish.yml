@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: c8db500b-f4c8-47b6-ba23-77d756fa5bc0
+      url: 'https://evanginting.quarto.pub/test'

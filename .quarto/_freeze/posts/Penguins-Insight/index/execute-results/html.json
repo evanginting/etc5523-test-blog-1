@@ -1,0 +1,16 @@
+{
+  "hash": "5fa0e0ca2d3206a09f369740ca4c45c2",
+  "result": {
+    "markdown": "---\ntitle: \"Practice\"\nformat: html\neditor: visual\nauthor: \"Evan Ginting\"\ndate: \"2023-08-17\"\n---\n\n\n## Penguins Dataset\n\nIn this analysis, we will try to unveil the relationship between body mass and flipper length of penguins. Do heavier the penguins have longer flipper? Let's find out!\n\nHere is all the libraries that we are going to use in this analysis.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(palmerpenguins)\nlibrary(tidyverse)\nlibrary(ggplot2)\n```\n:::\n\n\nHere is the preview of the dataset:\n\n\n::: {.cell}\n\n```{.r .cell-code}\nglimpse(penguins)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nRows: 344\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               <fct> male, female, female, NA, female, male, female, male…\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n```\n:::\n:::\n\n\nLet see the correlation between body mass and flipper length.\n\n\n::: {.cell}\n\n```{.r .cell-code}\npenguins %>%\n  na.omit() %>%\n  ggplot(aes(x = body_mass_g,\n                     y = flipper_length_mm,\n                     colour = sex)) +\n         geom_point() +\n  ggtitle(\"Correlation between Flipper Length vs Body Mass\") +\n  xlab(\"Flipper Length (mm)\") +\n  ylab(\"Body Mass (gram)\") +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-3-1.png){width=672}\n:::\n:::\n\n\nFrom the plot above, seems like there is positive relation between body mass and flipper length.\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

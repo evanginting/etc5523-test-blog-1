@@ -1,0 +1,46 @@
+---
+title: "Practice"
+format: html
+editor: visual
+author: "Evan Ginting"
+date: "2023-08-17"
+---
+
+## Penguins Dataset
+
+In this analysis, we will try to unveil the relationship between body mass and flipper length of penguins. Do heavier the penguins have longer flipper? Let's find out!
+
+Here is all the libraries that we are going to use in this analysis.
+
+```{r}
+#| warning: false
+#| message: false
+
+library(palmerpenguins)
+library(tidyverse)
+library(ggplot2)
+```
+
+Here is the preview of the dataset:
+
+```{r}
+glimpse(penguins)
+```
+
+Let see the correlation between body mass and flipper length.
+
+```{r}
+penguins %>%
+  na.omit() %>%
+  ggplot(aes(x = body_mass_g,
+                     y = flipper_length_mm,
+                     colour = sex)) +
+         geom_point() +
+  ggtitle("Correlation between Flipper Length vs Body Mass") +
+  xlab("Flipper Length (mm)") +
+  ylab("Body Mass (gram)") +
+  theme_minimal()
+```
+
+From the plot above, seems like there is positive relation between body mass and flipper length.
+
